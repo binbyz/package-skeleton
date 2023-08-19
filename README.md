@@ -1,4 +1,3 @@
-# GG
+# Skeleton
 
-> PHP, Debugging and Logging with GG!
-# package-skeleton
+## package-skeleton
