@@ -4,7 +4,7 @@ namespace Beaverlabs\Skeleton\Tests;
 
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 
-abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
+class TestCase extends \Orchestra\Testbench\TestCase
 {
     use \Orchestra\Testbench\Concerns\CreatesApplication;
     use DatabaseMigrations;
@@ -12,8 +12,12 @@ abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
     protected function setUp(): void
     {
         parent::setUp();
+    }
 
-//        $this->app->register(GgServiceProvider::class);
-//        $this->app->register(EventServiceProvider::class);
+    protected function getPackageProviders($app)
+    {
+        return [
+//            \Beaverlabs\Skeleton\SkeletonServiceProvider::class,
+        ];
     }
 }
